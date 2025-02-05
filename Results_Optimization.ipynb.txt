@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+df["Classification"].value_counts().plot(kind="bar", color=["green", "red"])
+plt.title("Classification Distribution (Friendly vs. Enemy)")
+plt.show()
+accuracy_rate = df["Accuracy"].value_counts(normalize=True) * 100
+print("Detection Accuracy Rate:\n", accuracy_rate)
+df["Timestamp"] = pd.to_datetime(df["Timestamp"])
+df.set_index("Timestamp")["Classification"].resample("H").count().plot()
+plt.title("Detection Trends Over Time")
+plt.xlabel("Time")
+plt.ylabel("Number of Detections")
+plt.show()
