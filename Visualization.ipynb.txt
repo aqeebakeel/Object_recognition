@@ -1,0 +1,4 @@
+import matplotlib.pyplot as plt
+df["Classification"].value_counts().plot(kind="bar", color=["green", "red"])
+plt.title("Classification Distribution (Friendly vs. Enemy)")
+plt.show()
