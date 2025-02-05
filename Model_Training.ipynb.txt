@@ -1,0 +1,10 @@
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+
+y_true = df["Classification"]
+y_pred = df["Accuracy"].map({"Yes": 1, "No": 0})
+
+cm = confusion_matrix(y_true, y_pred)
+sns.heatmap(cm, annot=True, cmap="Blues", fmt="d")
+plt.title("Confusion Matrix")
+plt.show()
