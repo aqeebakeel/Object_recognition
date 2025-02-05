@@ -1,0 +1,6 @@
+import pandas as pd
+
+df = pd.read_csv("rover_detection_data.csv")
+print(df.head())  # View first 5 rows
+df.dropna(inplace=True)  # Remove missing values
+df["Classification"] = df["Classification"].map({"Friendly": 0, "Enemy": 1})  # Encode categories
