@@ -1,4 +1,4 @@
-# Terrain_Scout_Object_Recognition
+# Object_Recognition
 This project focuses on real-time object detection and classification using machine learning and data analytics. The rover detects humans, classifies them as friendly or enemy, and takes actions based on gesture recognition. The dataset is simulated, stored in CSV format, and analyzed for system accuracy, performance, and improvements.
 ![image](https://github.com/user-attachments/assets/6d6111b2-2ab2-48f1-a393-f1d905b4df00)
 The above image is about the classification made for friendly and enemy detection based upon the provided dataset.
